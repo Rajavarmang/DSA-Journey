@@ -17,5 +17,6 @@
 
 
 📅 Progress Tracker
-Day	         Problem	          Topic	          Status
-Day 01	   Slove-me-first	    python basics	      ✅
+|Day	    |    Problem	     |    Topic	      |   Status |
+|---------|------------------|----------------|--------- |
+|Day 01	  | Slove-me-first	 |  python basics |     ✅   |
