@@ -1,0 +1,25 @@
+"""sum of numbers in the list"""
+
+
+
+import os    #Provides operating system functionality.   
+  
+def simpleArraySum(ar):
+    # Write your code here
+    sum=0
+    for i in ar:
+        sum=sum+i
+    return sum
+        
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')   #os.environ accesses environment variables. it stores the output file path in OUTPUT_PATH.
+
+    ar_count = int(input().strip())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = simpleArraySum(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
