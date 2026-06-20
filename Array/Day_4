@@ -1,3 +1,4 @@
+#Time conversion
 import math
 import os
 
@@ -33,3 +34,47 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+*********************************************
+*********************************************
+
+# Diagonal difference program.
+
+import math
+import os
+
+
+#
+# Complete the 'diagonalDifference' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+#
+
+def diagonalDifference(arr):
+    left_diagonal=0
+    right_diagonal=0
+    n=len(arr)
+    for i in range(n):
+        left_diagonal+=arr[i][i]
+        right_diagonal+=arr[i][n-1-i]
+    return abs(left_diagonal-right_diagonal)
+            
+            
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
