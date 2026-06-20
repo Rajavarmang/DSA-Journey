@@ -1,0 +1,35 @@
+import math
+import os
+
+
+#
+# Complete the 'timeConversion' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def timeConversion(s):
+    hours=int(s[0:2])
+    
+    if hours < 12 and s[len(s)-2:] == 'PM':
+        hours+=12
+    elif hours==12 and s[len(s)-2:] == 'AM':
+        hours-=12
+
+    hours_string = str(hours)
+    if len(hours_string) == 1:
+        hours_string = '0'+str(hours)
+
+    return hours_string+s[2:len(s)-2]
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = timeConversion(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
