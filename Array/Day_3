@@ -1,3 +1,5 @@
+#compareTriplets
+#platform: HackerRank
 import math
 import os
 
